@@ -1,0 +1,26 @@
+<html>
+  <!--  Our head tag, which we will use to include scripts as necessary  -->
+  <head>
+    <!--   The include statement for aframe   -->
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="./script.js"></script>
+    <!--   The include statement for the environment component   -->
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <!--   All of our aframe code will be contained within our scene   -->
+    <a-scene>
+      <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
+             scale-on-mouseenter="to: 2.2 2.2 2.2">
+        <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+      repeat="indefinite">2</a-animation>
+      </a-box>
+      <!--  Dressing amount is the number of trees in the forest  -->
+      <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
+      
+      <a-camera position="0 1 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
